@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@400;700&display=swap');
+
+*{
+    margin: 0px ;
+    padding: 0px ;
+
+}
+
+:root{
+    --font1: 'Lora', serif;
+    --font2: 'Nunito', sans-serif;
+    
+}
+h1{
+font-family: var(--font2);
+font-weight: bolder  ;
+}
+/* h3{
+    font-family: var(--font2);
+    font-weight: bolder  ;
+
+} */
+
+#cv-form{
+    /* display: none; */
+}
+#cv-template{
+    display: none;
+}
+.my-image{
+    width: 40%;
+    
+    
+}
+.firstcol{
+    background-color: #137662 ;
+}
+.card-header{
+    background-color: #137662 !important;
+}
+
+/* .btn-primary{
+    background-color: #137662  !important;
+} */

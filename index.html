@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <
+
+</head>
+
+<body>
+
+    <div class="container" id="cv-form">
+        <div class="resumehead  text-center mt-2">
+            <h1>Resume Generator</h1>
+        </div>
+
+        <div class="head mx-2 my-5  $font-family-'Lora',serif">
+            <h3> Personal Information </h3>
+        </div>
+
+        <div class="row mx-3 my-4">
+            <div class="col-md-4 ">
+                <label for="first name" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="namefield" placeholder="Enter first name">
+            </div>
+
+            <div class="col-md-4">
+                <label for="middle name" class="form-label">middle Name</label>
+                <input type="text" class="form-control" id="middlenamefield" placeholder="Enter middle name">
+            </div>
+
+            <div class="col-md-4">
+                <label for="last name" class="form-label">last Name</label>
+                <input type="text" class="form-control" id="lastfield" placeholder="Enter last name">
+            </div>
+        </div>
+
+        <div class="row mx-3 my-4">
+            <div class="col-md-4">
+                <label for="contact" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" id="contactfield" placeholder="Enter contact">
+            </div>
+
+            <div class="col-md-4">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailfield" placeholder="name@example.com">
+            </div>
+
+            <div class="col-md-4">
+                <label for="exampleFormControlInput1" class="form-label">Profession</label>
+                <input type="text" class="form-control" id="Professionfield" placeholder="enter here">
+            </div>
+
+
+        </div>
+
+
+        <div class="row mx-3 my-4">
+
+            <div class="col-md-4 ">
+                <label for="country" class="form-label">Country</label>
+                <input type="Country" class="form-control" id="countryfield" placeholder="select Country">
+            </div>
+
+
+            <div class="col-md-4">
+                <label for="State" class="form-label">State</label>
+                <input type="State" class="form-control" id="Statefield" placeholder="select State">
+            </div>
+
+            <div class="col-md-4">
+                <label for="City" class="form-label">City</label>
+                <input type="City" class="form-control" id="Cityfield" placeholder="select City">
+            </div>
+        </div>
+
+        <div class="row mx-3 my-4">
+
+            <div class="col-md-4 ">
+                <label for="Linkedln" class="form-label">Linkedln</label>
+                <input type="text" class="form-control" id="Linkedlnid" placeholder="enter link">
+            </div>
+
+
+            <div class="col-md-4">
+                <label for="Github" class="form-label">Github</label>
+                <input type="text" class="form-control" id="Githubid" placeholder="enter link">
+            </div>
+
+            <div class="col-md-4">
+                <label for="formFile" class="form-label">Profile</label>
+                <input class="form-control" type="file" id="profileField">
+            </div>
+
+
+        </div>
+
+
+        <div class="head mx-2 my-5">
+            <h3> Professional Information</h3>
+        </div>
+
+
+        <div class="row mx-3 my-4">
+
+            <div class="col-md-6  " id="ss">
+                <label for="" class="form-label ">Soft Skills</label>
+                <input type="text" class="form-control softskillfield"  placeholder="Enter here">
+                <div class="container  text-center " id="ssaddbutton">
+                    <button onclick="addnewsoftskillfield()" class="btn btn-primary my-2 mx-3 ">ADD</button>
+                </div>
+            </div>
+
+
+            <div class="col-md-6" id="hs">
+                <label for="" class="form-label ">Hard Skills</label>
+                <input type="text" class="form-control hardskillfield"  placeholder="Enter here">
+                <div class="container text-center    " id="hsaddbutton">
+                    <button onclick="addnewhardskillfield()" class="btn btn-primary my-2 mx-3 ">ADD</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- objective -->
+
+        <div class="mb-3 mx-5 ">
+            <label for="objective">Your Objective</label>
+            <textarea class="form-control " placeholder="Enter Objective" rows="3" id="objectivefield"></textarea>
+        </div>
+
+        <!-- education -->
+        <div class="mb-3 mx-5 " id="aq">
+            <label for="forEducation"> Academic Qualification </label>
+            <textarea class="form-control aqfield" rows="3" placeholder="Enter here "></textarea>
+            <div class="container  " id="aqaddbutton">
+                <button onclick="addnewAQfield()" class="btn btn-primary my-2 mx-3 ">ADD</button>
+            </div>
+        </div>
+
+        <!-- workexperince -->
+
+        <div class=" mb-3 mx-5" id="we">
+            <label for="work experince">Work Experience</label>
+            <textarea class="form-control wefield" placeholder="Enter here" rows="3"></textarea>
+            <div class="container " id="weaddbutton">
+                <button onclick="addnewWEfield()" class="btn btn-primary my-2 mx-3 ">ADD</button>
+            </div>
+        </div>
+
+        <!-- postion -->
+
+        <div class="mb-3 mx-5   " id="cr">
+            <label for="position">Club And Responsibilties</label>
+            <textarea class="form-control crfield" placeholder="Enter enter here" rows="3"></textarea>
+            <div class="container " id="craddbutton">
+                <button onclick="addnewCRfield()" class="btn btn-primary my-2 mx-3 ">ADD</button>
+            </div>
+        </div>
+
+
+        <div class="text-center my-4">
+            <button onclick="generatecv()" type="button" class="btn btn-primary ">Generate CV</button>
+        </div>
+    </div>
+
+    <!-- cv template -->
+
+    <div class="container-fluid" id="cv-template">
+
+        <div class="row">
+            <!-- first col -->
+            <div class="col-md-4 firstcol ">
+                <img src="/images/defaultimage.jpg" alt=""
+                    class="img-fluid my-image rounded-circle mx-auto d-block m-3" id="imgtemplate">
+                <div class="container text-center ">
+                    <div class="namecontainer d-flex justify-content-center ">
+                        <p class="text-white m-1" id="namefT">Sopheia</p>
+                        <p class="text-white m-1 " id="namemT">meery</p>
+                        <p class="text-white m-1" id="namelT">joseph</p>
+
+                    </div>
+                    <!-- <hr class="mx-auto d-block" style="width: 20%; border: 1px solid white;"> -->
+                    <p class=" text-white m-3" id="SET"> Software Engineer</p>
+                    <hr class="mx-auto d-block" style="width: 40%; border: 1px solid white;">
+                    <!-- <p class=" text-white"><b> PERSONAL DETAILS:</b></p> -->
+                    <p class=" text-white mb-1"><b>Email:</b></p>
+                    <p class=" text-white mb-4" id="emailT">sophialorean@gmail.com</p>
+
+                    <p class=" text-white mb-1"><b>Contact:</b></p>
+                    <p class="text-white mb-4" id="contactT">+215613517 +21477219</p>
+
+                    <p class=" text-white mb-1"><b>Address:</b></p>
+                    <p class="text-white mb-1" id="cityT">Seattle , WA 98116</p>
+                    <p class="text-white mb-1" id="stateT">cytehb</p>
+                    <p class="text-white mb-5 " id="countryT">United States, (206) 742-5187</p>
+
+                    <p class=" text-white mb-1"><b>Linkedln:</b></p>
+                    <a href="hahijefokjweihrihasi" class=" mb-4" id="linkdlnT">huehruhufhwehfhsuheuiqhius</a>
+
+                    <p class=" text-white mb-1"><b>GIthub:</b></p>
+                    <a href="hahijefo" class=" mb-4" id="githubT">huehruhufhwejhsfkujhhs</a>
+
+
+
+
+
+                    <hr style="border: 1px solid white;">
+
+
+                </div>
+
+                <div class="container m-5 ">
+                    <p class=" text-white  mb-1"><b> Soft Skills:</b></p>
+                    <ul class="text-white" id="SkillT">
+                        <li>Team Management</li>
+                        <li>Hardworking</li>
+                        <li>Problem solving</li>
+                        <li>Creativity</li>
+
+                    </ul>
+
+                    <p class=" text-white  mb-1"><b>Hard Skills:</b></p>
+
+                    <ul class="text-white" id="SkillT2">
+                        <li>C++</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+
+            <!-- second col -->
+            <div class="col-md-8 ">
+
+                <div class="container text-center d-flex justify-content-center">
+                    <h1 id="namefT2" class="m-1"><b>sopehia </b></h1>
+                    <h1 id="namemT2" class="m-1"><b>meery</b></h1>
+                    <h1 id="namelT2" class="m-1"><b>joseph </b></h1>
+
+                </div>
+
+                <div class="card  my-4" style="width: 45rem;">
+                    <div class="card-header background">
+                        <h3>Profile</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text" id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Dolorum, doloribus
+                            blanditiis, possimus exercitationem tenetur similique minima temporibus odit, nihil officia
+                            veritatis commodi porro maiores deserunt! Repudiandae, soluta. Est repellat odit qui.
+                            Asperiores amet distinctio temporibus voluptatem dolorem rem facilis quos..</p>
+                        <!-- <h5 class="card-title">Profile</h5> -->
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                        <!-- <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a> -->
+                    </div>
+                </div>
+
+
+                <div class="card" style="width: 45rem;">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                        <p class="card-text">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores voluptatem ad cumque
+                                voluptatibus deserunt vel. Dicta laudantium amet eum d.</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut accusamus doloremque quia
+                                nihil ab ullam eum cum fuga! Necessitatibus volupta</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus delectus, eum vitae
+                                beatae ea voluptates tempore cupidita</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="card" style="width: 45rem;">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                        <p class="card-text">
+                        <ul id="AqT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores voluptatem ad cumque
+                                voluptatibus deserunt vel. Dicta laudantium amet eum d.</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut accusamus doloremque quia
+                                nihil ab ullam eum cum fuga! Necessitatibus volupta</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus delectus, eum vitae
+                                beatae ea voluptates tempore cupidita</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="card" style="width: 45rem;">
+                    <div class="card-header background">
+                        <h3>Position And Club Responsibilties</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                        <p class="card-text">
+                        <ul id="crT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores voluptatem ad cumque
+                                voluptatibus deserunt vel. Dicta laudantium amet eum d.</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut accusamus doloremque quia
+                                nihil ab ullam eum cum fuga! Necessitatibus volupta</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus delectus, eum vitae
+                                beatae ea voluptates tempore cupidita</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container mt-5 text-center">
+                    <button onclick="Printcv()" type="button" class="btn btn-primary ">Print CV</button>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="col-md-4">
+            <label for="">Country</label>
+            <select id="Country" onchange="fillcity()">
+            <option value="">-Choose Country-</option>
+            <option value="">India</option>
+            <option value="">America</option>
+            <option value="">United States</option>
+         </select>
+         </div> -->
+
+
+    <!-- <div class="col-md-4">
+            <label for="">City</label>
+           <select id="city" onchange="fillcity()">
+           <option value="">-Choose City-</option>
+           <option value="">Madhya Pradesh</option>
+           <option value="">Gujrat</option>
+           <option value="">Haryana</option>
+        </select>
+        </div> -->
+    <!-- 
+        <div class="col-md-4">
+            <label for="">States</label>
+            <select id="states" onchange="fillcity()">
+            <option value="">-Choose States-</option>
+            <option value="">Madhya Pradesh</option>
+            <option value="">Gujrat</option>
+            <option value="">Haryana</option>
+         </select>
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
